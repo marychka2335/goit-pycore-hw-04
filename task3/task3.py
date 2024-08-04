@@ -19,7 +19,7 @@ def display_directory_structure(directory_path, indent=0):
 
     for item in path.iterdir():
         if item.is_dir():
-            display_directory_structure(str(item), indent + 2) # Передаємо шлях як рядок
+            display_directory_structure(str(item), indent + 2) 
         elif item.is_file():
             print(" " * (indent + 2) + Fore.GREEN + f"📄 {item.name}")
 
@@ -27,7 +27,7 @@ def display_directory_structure(directory_path, indent=0):
 if __name__ == "__main__":
     if len(sys.argv) != 2:
         print(Fore.RED + "Помилка: Потрібно вказати шлях до директорії.")
-        print(f"Використання: python {sys.argv[0]} /шлях/до/директорії")
+        # print(f"Використання: python {sys.argv[0]} /шлях/до/директорії")
         sys.exit(1)
 
     directory_path = sys.argv[1]
